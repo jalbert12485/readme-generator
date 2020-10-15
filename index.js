@@ -1,5 +1,4 @@
 const { constants } = require("buffer");
-// const generateMarkdown =require("./utils/generateMarkdown")
 const fs = require("fs");
 const inquirer = require("inquirer");
 const answer=[];
@@ -53,8 +52,8 @@ inquirer
 function assignContent(){
   sections[0].name=answer[0];
   sections[2].content=`${answer[1]} \n ![](Screenshot.png)`;
-  sections[3].content=`1. Clone this repository at http:/${answer[3]}.${answer[4]}.git \n`+"```sh \n"+
-  `git clone http://http://${answer[3]}.${answer[4]}.git` +"\n ``` \n"+`2. Install packages using \n` +"```sh \n"+
+  sections[3].content=`1. Clone this repository at [GitHub](https://github.com/${answer[2]}/${answer[3]}.git) \n`+"```sh \n"+
+  `git clone https://github.com/${answer[2]}/${answer[3]}.git` +"\n ``` \n"+`2. Install packages using \n` +"```sh \n"+
   `npm i` +"\n ``` \n";
   sections[4].content=answer[5];
   sections[5].content=`If you would like to contribute to this package, please contact the author via [email](mailto:${answer[4]}).  Provide any details about your proposed chagnes so that your contribution can be made.`

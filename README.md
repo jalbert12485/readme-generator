@@ -7,12 +7,12 @@
  * [License](#License) 
   
 ## About 
- This project is meant to facilitate the fast creation of a readme file for a github repository.  It will take user input and insert this into a readme template to get a consistent output. 
+ This project is meant to facilitate the fast creation of a readme file for a github repository. It will take user input and insert this into a readme template to get a consistent output. 
  ![](Screenshot.png) 
 ## Installation 
- 1. Clone this repository at http:/readme-generator.jalbert@carthage.edu.git 
+ 1. Clone this repository at [GitHub](https://github.com/jalbert12485/readme-generator.git) 
 ```sh 
-git clone http://http://readme-generator.jalbert@carthage.edu.git
+git clone https://github.com/jalbert12485/readme-generator.git
  ``` 
 2. Install packages using 
 ```sh 
@@ -20,7 +20,7 @@ npm i
  ``` 
  
 ## Usage 
- In order to use this project, you will need to use the terminal to initialize the file index.js.  You will then be prompted with questions that gather the information required to create your readme file.  You can also include a screenshot in your readme by placing it in the same folder as the index file. 
+ In order to use this project, you will need to use the terminal to initialize the file index.js. You will then be prompted with questions that gather the information required to create your readme file. You can also include a screenshot in your readme by placing it in the same folder as the index file. 
 ## Contributing 
  If you would like to contribute to this package, please contact the author via [email](mailto:jalbert@carthage.edu).  Provide any details about your proposed chagnes so that your contribution can be made. 
 ## License 
