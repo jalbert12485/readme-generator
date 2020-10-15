@@ -14,6 +14,7 @@ const questions = ["What is the title of this project?",
     "What license does this project have?"
 ];
 
+// An array to use with inquirer that will create the prompts.
 const promptArray=[];
 
 for(let i=0; i< questions.length; i++){
@@ -24,9 +25,10 @@ for(let i=0; i< questions.length; i++){
     })
 }
 
+// Sectoins that will be in the readme.
 const sections=[{name: ""},{name: "Table of Contents"},{ name: "About"},{name: "Installation"},{name: "Usage"},{name: "Contributing"},{name: "License"}];
 
-
+// Creating content for the table contents
 let contents="";
 for(let i=2; i< sections.length; i++){
     contents=contents+`* [${sections[i].name}](#${sections[i].name}) \n `;
@@ -34,6 +36,7 @@ for(let i=2; i< sections.length; i++){
 
 sections[1].content=contents;
 
+// Gets the information that is required from the user.
 inquirer
   .prompt(
     promptArray
@@ -48,7 +51,7 @@ inquirer
 
   });
 
-
+// Add a key to the array of sections that gives the content of sections and assigns the name of the project.
 function assignContent(){
   sections[0].name=answer[0];
   sections[2].content=`${answer[1]} \n ![](Screenshot.png)`;
@@ -79,20 +82,9 @@ fs.writeFile("README.md", data, function(err) {
     
 }
 
-function appendToFile(data) {
-    
-    fs.appendFile("README.md", data, function(err) {
-    
-        if (err) {
-          return console.log(err);
-        }
-      
-      
-      });
-        
-    }
 
 
+// Creates the data to send to the writeFile function.
 function generateMarkdown(){
     readMeContent=`# ${sections[0].name} \n`;
 
